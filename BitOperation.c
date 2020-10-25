@@ -7,7 +7,7 @@
 
 
 
-#include "BitManipulation.h"
+#include "BitOperation.h"
 
 uint64_t BitOp_GetBitMaskWithOffset(uint32_t length, uint32_t offset){
 	uint64_t bitmask = ~0;
