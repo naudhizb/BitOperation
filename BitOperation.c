@@ -9,6 +9,17 @@
 
 #include "BitOperation.h"
 
+uint64_t BitOp_GetBitsWithShift(uint64_t data, uint64_t mask){
+	uint64_t res = BitOp_GetBits(data, mask);
+	int32_t offset = BitOp_GetLSBOffset(mask);
+	if(0 < offset){
+		return res >> offset;
+	} else {
+		// mask invalid
+	}
+	return 0;
+}
+
 uint64_t BitOp_GetBitMaskWithOffset(uint32_t length, uint32_t offset){
 	uint64_t bitmask = ~0;
 	bitmask = bitmask << length;
