@@ -1,8 +1,12 @@
-/*
- * BitOperation.h
- *
- *  Created on: 2020. 10. 14.
- *      Author: mjlee2
+/**
+ * @file BitOperation.h
+ * @author naudhizb (naudhizb@gmail.com)
+ * @brief this file contains bit operation functions.
+ * @version 0.1
+ * @date 2021-01-09
+ * 
+ * @copyright Copyright (c) 2021
+ * 
  */
 
 #ifndef BITOPERATION_H_
@@ -14,6 +18,11 @@ extern "C" {
 
 #include <stdint.h>
 
+/**
+ * @brief Macro functions. In Single Bit Operation requires "Bit offset"
+ *  Multi Bit Operation requires "Bit mask".
+ *  BitOp_PutBits function requires mask and data 
+ */
 #define BitOp_GetBit(data, offset)	    (!!((data)&(1 << (offset))))
 #define BitOp_SetBit(data, offset)	    ((data) |= (1 << (offset)))
 #define BitOp_ClearBit(data, offset)	((data) &=~(1 << (offset)))
