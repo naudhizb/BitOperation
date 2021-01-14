@@ -41,7 +41,7 @@ uint64_t BitOp_GetBitsWithShift(uint64_t data, uint64_t mask); // GetBits Automa
 uint64_t BitOp_GetBitMask(uint32_t length); // Get BitMask by length
 uint64_t BitOp_GetBitMaskWithOffset(uint32_t length, uint32_t offset);
 int32_t  BitOp_GetLSBOffset(uint64_t data);
-
+void     BitOp_SwapBytes(uint8_t *ptr, uint32_t len);
 #if __cplusplus
 }
 #endif

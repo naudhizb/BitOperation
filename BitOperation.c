@@ -75,3 +75,22 @@ int32_t BitOp_GetLSBOffset(uint64_t data){
 	}
 	return res;
 }
+
+/**
+ * @brief Change Endianess of Data(Swap bytes)
+ * 
+ * @param ptr start pointer of swap bytes
+ * @param len length of swap bytes
+ */
+void BitOp_SwapBytes(uint8_t *ptr, uint32_t len){
+	uint8_t tmp = 0;
+	uint8_t *head = ptr;
+	uint8_t *tail = ptr + len - 1;
+	for(int32_t index = 0; index < len/2; index++){
+		tmp = *head;
+		*head = *tail;
+		*tail = tmp;
+		head++;
+		tail--;
+	}
+}
