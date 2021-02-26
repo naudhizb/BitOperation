@@ -1,2 +1,5 @@
-# BitOperation
-Simple Bit Operation Macro &amp; Function
+# PrimitiveOperation
+
+Simple Code Snippset for Bit&Number Operation Macro &amp; Function
+
+
